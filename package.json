@@ -1,0 +1,50 @@
+{
+  "name": "bitpay-push-notification-client",
+  "description": "Client for BitPay's push notification service.",
+  "author": "BitPay Inc",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": [
+    "bitcoin",
+    "bitpay",
+    "client"
+  ],
+  "engine": "node >= 0.12.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:bitpay/bitpay-push-notification-client.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/bitpay/bitpay-push-notification-client/issues"
+  },
+  "dependencies": {
+    "browser-request": "^0.3.3",
+    "lodash": "^3.3.1",
+    "request": "^2.53.0"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "chai": "^1.9.1",
+    "coveralls": "^2.11.2",
+    "grunt": "~0.4.0",
+    "grunt-jsdox": "^0.1.7",
+    "istanbul": "*",
+    "mocha": "^1.18.2",
+    "sinon": "^1.10.3",
+    "supertest": "*",
+    "tingodb": "^0.3.4",
+    "uglify": "^0.1.1",
+    "uuid": "^2.0.1"
+  },
+  "scripts": {
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter spec test",
+    "test": "./node_modules/.bin/mocha",
+    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "docs": "./node_modules/.bin/jsdox lib/* lib/common lib/errors -o docs && cat README.header.md  docs/*.md LICENSE > README.md"
+  },
+  "contributors": [{
+    "name": "Andy Phillipson",
+    "email": "andy@bitpay.com"
+  }]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "bitpay-push-notification-client",
+  "main": "index.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bitpay/bitpay-push-notification-client",
+  "authors": ["BitPay Inc"],
+  "description": "Client for push server notifications.",
+  "keywords": [
+    "bitcoin",
+    "bitpay",
+    "client"
+  ],
+  "ignore": [
+    "**/.*",
+    "lib",
+    "node_modules",
+    "Gruntfile.js",
+    "Makefile",
+    "index.js",
+    "test",
+    "Makefile"
+  ]
+}
