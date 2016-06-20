@@ -89,7 +89,7 @@ API.prototype.send = function(opts, cb) {
  * @param {String} opts.token - Device token.
  * @returns {Object} response - Status of subscription.
  */
-API.prototype.subscribeToNotifications = function(opts, cb) {
+API.prototype.subscribe = function(opts, cb) {
   var url = '/subscribe/';
   this._doPostRequest(url, opts, function(err, response) {
     if (err) return cb(err);
@@ -103,7 +103,7 @@ API.prototype.subscribeToNotifications = function(opts, cb) {
  * @param {String} opts.token - Device token.
  * @return {Callback} cb - Status of unsubscription.
  */
-API.prototype.unsubscribeFromNotifications = function(opts, cb) {
+API.prototype.unsubscribe = function(opts, cb) {
   var url = '/unsubscribe/';
   this._doPostRequest(url, opts, function(err, response) {
     if (err) return cb(err);

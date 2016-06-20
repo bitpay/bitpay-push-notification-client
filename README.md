@@ -30,7 +30,7 @@ npm i bitpay-push-notification-client
 ## Class: API
 ClientAPI constructor.
 
-### API.sendNotification(opts, callback) 
+### API.send(opts, callback) 
 
 Send a push notification.
 
@@ -72,7 +72,7 @@ Attribute | Type | Default | Description
 `ios.alert` | `string` | | Message to iOS users.
 `ios.sound` | `string` | | The sound to play on notification.
 
-### API.subscribeToNotifications(opts, callback) 
+### API.subscribe(opts, callback) 
 
 Subscribes the device to receive push notifications.
 
@@ -97,7 +97,7 @@ Attribute | Type | Default | Description
 `opts.type`   | `string` | | The device type being subscribed, can be either `android` or `ios`.
 `opts.token`  | `string` | | The device token (e.g., APNS/GCM registration ID, obtained from a third-party service) to be used for push notification.
 
-### API.unsubscribeFromNotifications(opts, callback)
+### API.unsubscribe(opts, callback)
 
 Unsubscribes the device from receiving push notifications.
 
