@@ -229,7 +229,10 @@ API.prototype._doRequest = function(method, url, args, cb) {
       if (!res.statusCode)
         return cb(new Errors.CONNECTION_ERROR);
 
-      return cb(API._parseError(body));
+      if (body)
+        return cb(API._parseError(body));
+
+      return cb(new Errors.BAD_REQUEST(res.statusCode));
     }
 
     if (body === '{"error":"read ECONNRESET"}')
@@ -392,6 +395,9 @@ var errorSpec = [{
 }, {
   name: 'ECONNRESET_ERROR',
   message: 'ECONNRESET, body: {0}'
+}, {
+  name: 'BAD_REQUEST',
+  message: 'bad request, code: {0}'
 } ];
 
 module.exports = errorSpec;
